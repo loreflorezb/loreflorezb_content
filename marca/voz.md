@@ -1,6 +1,6 @@
 # La voz de Lore
 
-Sale de dos fuentes: la sección 02 del manual y los guiones reales en `marca/guiones/`.
+Resumen práctico. La fuente completa y mandante es `marca/reglas-de-creacion.md` (sección 4, Contrato de Voz); esto sale de ahí, de la sección 02 del manual y de los reels reales en `marca/voz/`.
 Los guiones son transcripciones automáticas: lee siempre la lista de «Probables errores del reconocedor» de cada uno antes de citarlos.
 
 ## En una línea
@@ -54,18 +54,21 @@ El arco se repite en los cuatro guiones. Un carrusel lo traduce lámina por lám
 
 ## Cómo se nombra al equipo
 
-Los guiones marcan que el lenguaje cambió: hoy es **«psicólogos y psiquiatra cristianos»** (neutro). «Psicólogas» y «nosotras» ya no se usan.
-El manual todavía dice «Psicólogas y Psiquiatra Cristiana» en la invitación de cierre de las guías PDF; hasta que Lore lo confirme, usa el término nuevo y avísalo en la entrega.
+Hoy es **«psicólogos y psiquiatra cristianos»** (reglas de creación §1). «Psicólogas» y «nosotras» ya no se usan, aunque sigan en el manual, el README del sistema de diseño y algunos reels.
 
-## De guion a carrusel
+## De guion a carrusel (Patrón B, reglas §11)
 
-| Lámina | Función del manual | Qué toma del arco |
+| Lámina | Función | Qué toma del arco |
 |---|---|---|
-| 1 | Gancho | Paso 1, reducido a 2–5 palabras con verbo en presente |
-| 2–4 | Problema psicológico | Pasos 2 y 3: la anécdota y el nombre clínico |
-| 5–7 | Explicación y verdad bíblica | Pasos 4 y 5: la distinción en pareja (frase a mano) y el versículo |
-| 8–9 | Protocolo de 3–4 pasos | Lo que ella hace ahora («Ahora cuando la ansiedad aparece me pregunto…») |
-| 10 | Autoevaluación | Paso 6 y las preguntas del cierre, sin respuestas |
-| 11–12 | Transición + invitación | Paso 7: «Cuéntame…» o «Comenta [PALABRA]», y el equipo / enlace del perfil |
+| 1 | Portada: afirmación de 6 a 10 palabras | Paso 1 |
+| 2 | Escena que se reconoce | Paso 2: la anécdota |
+| 3 | Empatía o confesión | Paso 2: lo que se dijo a sí misma |
+| 4 | Contraste con la Escritura | Paso 5: el pasaje, en NBLA, cita corta |
+| 5 | Lista corta en cajitas | Las frases o escenas que la gente reconoce |
+| 6 | Mecanismo psicológico | Paso 3: el nombre clínico |
+| 7 | Reencuadre en lámina oscura | Pasos 4 y 6: la distinción en pareja y el giro al corazón |
+| 8 | Qué puedes hacer hoy | Lo que ella hace ahora («Ahora cuando la ansiedad aparece me pregunto…») |
+| 9 | Señales de que necesitas acompañamiento | Momento puente (reglas §8.3) |
+| 10 | CTA | Paso 7: «Comenta [PALABRA]», pregunta abierta o CTA directo |
 
-Regla de fidelidad: usa sus frases literales siempre que existan (corrigiendo solo los errores del reconocedor). Cuando condenses, recorta; no parafrasees con palabras que ella no usa.
+Regla de fidelidad: cuando el post adapta un reel, usa sus frases literales (corrigiendo solo los errores del reconocedor); cuando condenses, recorta, no parafrasees. En piezas nuevas, el banco enseña el ritmo, no se copian sus frases (reglas §4.12).

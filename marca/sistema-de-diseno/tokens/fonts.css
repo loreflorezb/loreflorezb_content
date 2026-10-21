@@ -1,0 +1,15 @@
+/* Poppins: text face (Google Fonts). Anton: substitute for the condensed carousel headline
+   face, which was not supplied (see readme.md > Type substitutions). Outfit: substitute for Mont. */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Outfit:wght@300;400;500;600;700;800;900&family=Anton&display=swap");
+@font-face{font-family:"LoreFloresFont";src:url("../assets/fonts/LoreFloresFont-Regular.ttf") format("truetype");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"Playfair Display";src:url("../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");font-weight:400 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Playfair Display";src:url("../assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");font-weight:400 900;font-style:italic;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-Light.otf") format("opentype");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-LightItalic.otf") format("opentype");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-Medium.otf") format("opentype");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-Bold.otf") format("opentype");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-BoldItalic.otf") format("opentype");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-Heavy.otf") format("opentype");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-HeavyItalic.otf") format("opentype");font-weight:800;font-style:italic;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-Black.otf") format("opentype");font-weight:900;font-style:normal;font-display:swap}
+@font-face{font-family:"SF Pro Display";src:url("../assets/fonts/SF-Pro-Display-BlackItalic.otf") format("opentype");font-weight:900;font-style:italic;font-display:swap}

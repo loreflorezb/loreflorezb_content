@@ -1,0 +1,32 @@
+:root{
+/* Corner radii. Stickers and cards in the source are generously rounded;
+   the sticker label is a 12-14px radius rounded rect at A4 scale. */
+--radius-sm:8px;
+--radius-md:14px;
+--radius-lg:22px;
+--radius-xl:32px;
+--radius-pill:999px;
+
+/* The brand has no soft blurred shadows. Depth is a hard offset backing
+   in the darkest plum, sitting 5-6px down-right behind stickers and cards. */
+--offset-backing-x:6px;
+--offset-backing-y:6px;
+--shadow-hard:var(--offset-backing-x) var(--offset-backing-y) 0 var(--sticker-backing);
+--shadow-hard-sm:4px 4px 0 var(--sticker-backing);
+--shadow-hard-soft:5px 5px 0 var(--pink-300);
+
+--border-width:2px;
+--border-width-thick:3px;
+
+/* Decorative rotations used on stickers and star stamps */
+--tilt-sticker:-1.6deg; /* @kind other */
+--tilt-sticker-alt:1.2deg; /* @kind other */
+--tilt-star:-14deg; /* @kind other */
+
+--ease-standard:cubic-bezier(.22,.61,.36,1); /* @kind other */
+--duration-fast:120ms; /* @kind other */
+--duration-base:200ms; /* @kind other */
+
+--press-scale:0.985; /* @kind other */
+--hover-lift:-2px;
+}

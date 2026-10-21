@@ -1,0 +1,97 @@
+:root{
+/* --- Pinks: the brand's core hue, sampled from the guides --- */
+--pink-50:#fff4f5;   /* page wash, lightest */
+--pink-100:#ffe4e9;  /* card surface on pink pages */
+--pink-150:#fbf1ef;  /* warm cream wash (GUÍAS LF) */
+--pink-200:#ffd0d9;  /* diagonal band, soft fills */
+--pink-250:#f6cace;
+--pink-300:#ffb4c8;  /* sticker fill */
+--pink-400:#f9b5c2;  /* full-page pink background */
+--pink-500:#eda2b1;  /* header block on pink page */
+--pink-600:#eb8ba4;  /* primary accent pink */
+--pink-700:#e05d82;
+--pink-800:#d46da4;
+--rose-500:#cb5f79;  /* muted rose, sticker fill */
+--rose-600:#c9576c;
+--rose-700:#b83b5c;  /* body accent / rule color */
+--rose-800:#a94c67;
+--brick-600:#bb5858; /* star outline, warm brick */
+--brick-700:#8b2437;
+
+/* --- Plums & magentas: text and emphasis --- */
+--magenta-500:#d1457b;
+--magenta-600:#c04685; /* GUÍAS LF accent */
+--magenta-700:#bd2075;
+--magenta-800:#a5065c;
+--magenta-900:#870050; /* signature deep magenta */
+--plum-600:#89364e;
+--plum-700:#6f1a4f;
+--plum-800:#69224b;
+--plum-850:#66123e;
+--plum-900:#611439;   /* darkest ink */
+
+/* --- Warm neutrals --- */
+--cream-50:#fdfaf3;
+--sand-100:#f2dddf;
+--sand-200:#ebd2d4;
+--ink-900:#272727;
+--grey-500:#919191;
+--white:#ffffff;
+
+/* --- Coral: single hot accent, used sparingly for one word or one sticker --- */
+--coral-500:#fd9a71;
+
+/* --- Instagram carousel palette, sampled from the "6 flechas" series --- */
+--ig-blush:#ffcac9;      /* flat pink ground */
+--ig-salmon:#fdbbab;     /* salmon paper ground */
+--ig-paper:#f6f1e2;      /* cream paper ground */
+--ig-tape:#fefbea;       /* cream strip behind headlines */
+--ig-lavender:#9d7d9c;   /* headline ink, lavender verse box */
+--ig-wine:#840021;       /* Poppins body on blush/salmon */
+--ig-raspberry:#8b2049;  /* LoreFloresFont statements */
+--ig-rosewood:#b0595e;   /* body + verse ink on cream */
+--ig-peach-box:#e8b1a1;  /* verse box on cream */
+--ig-terracotta:#e5865c; /* speech bubble */
+--ig-highlight:#e98bb3;  /* marker behind hand-lettered words */
+--ig-fletch:#ff6fb0;     /* arrow feathers */
+--ig-rust:#a13e23;       /* cover headline */
+--ig-rust-dark:#7a250e;
+--ig-meta-blush:#c18b8a; /* header/footer meta on blush */
+--ig-meta-salmon:#9a5946;
+--ig-meta-paper:#88836f;
+--ig-star-blush:#f5c0bf; /* 8-point star, tone-on-tone */
+--ig-star-salmon:#f9b197;
+--ig-star-paper:#e8e0c8;
+
+/* --- Semantic aliases --- */
+--surface-page:var(--pink-50);
+--surface-page-cream:var(--pink-150);
+--surface-page-pink:var(--pink-400);
+--surface-card:var(--white);
+--surface-card-soft:var(--pink-100);
+--surface-band:var(--pink-200);
+--surface-header-block:var(--pink-500);
+
+--text-display:var(--plum-850);
+--text-heading:var(--plum-900);
+--text-body:var(--plum-900);
+--text-body-muted:var(--rose-700);
+--text-on-dark:var(--pink-50);
+--text-quote:var(--magenta-900);
+--text-footer:var(--plum-800);
+
+--accent-primary:var(--magenta-900);
+--accent-soft:var(--pink-600);
+--accent-hot:var(--coral-500);
+
+--sticker-fill:var(--pink-300);
+--sticker-fill-alt:var(--rose-500);
+--sticker-backing:var(--plum-900);
+--sticker-text:var(--plum-900);
+
+--border-hairline:var(--sand-200);
+--rule-accent:var(--rose-700);
+
+--link-color:var(--magenta-900);
+--link-color-hover:var(--magenta-600);
+}

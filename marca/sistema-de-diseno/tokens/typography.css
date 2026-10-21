@@ -1,0 +1,55 @@
+:root{
+/* Families. --font-display is Mont in the source files (substituted by Outfit). */
+--font-display:"Outfit","Poppins",system-ui,sans-serif;
+--font-body:"Poppins",system-ui,sans-serif;
+/* Carousel faces (Instagram). Headline face not supplied: Anton stands in. */
+--font-headline:"Anton","Oswald",Impact,sans-serif;
+--font-hand:"LoreFloresFont","Poppins",cursive;
+--font-serif:"Playfair Display",Georgia,serif;
+--font-sf:"SF Pro Display",system-ui,sans-serif;
+
+/* Carousel sizes, measured on the 1080x1440 (3:4) canvas */
+--ig-size-headline:122px;  /* POR QUÉ EVA ES EL PATRÓN */
+--ig-size-headline-xl:150px;
+--ig-size-kicker:62px;     /* FLECHA 2 */
+--ig-size-body:36px;       /* Poppins paragraphs */
+--ig-size-hand:50px;       /* LoreFloresFont statements */
+--ig-size-meta:27px;       /* SERIE 1/7 · PSICÓLOGA CRISTIANA · @LOREFLOREZB */
+--ig-leading-headline:0.9;
+--ig-leading-body:0.98;
+--ig-leading-hand:1.12;
+--ig-tracking-body:-0.04em;
+--ig-tracking-kicker:-0.06em;
+--ig-tracking-hand:0.04em;
+
+/* Weights as used in the guides */
+--weight-light:300;
+--weight-regular:400;
+--weight-medium:500;
+--weight-semibold:600;
+--weight-bold:700;
+--weight-extrabold:800;
+--weight-black:900;
+
+/* Sizes traced from the A4 (596x842pt) source pages */
+--size-cover:54px;      /* CONVERSACIONES QUE SANAN CULTURAS */
+--size-display:40px;
+--size-section:30px;    /* EL DOLOR EN NUESTRA COMUNIDAD */
+--size-subtitle:26.5px; /* "Una guía para líderes..." */
+--size-lead:22px;
+--size-quote:20.2px;    /* scripture blocks */
+--size-body:17px;
+--size-body-sm:15px;
+--size-label:13px;      /* PREGUNTAS PARA ABRIR... */
+--size-footer:8.7px;    /* @loreflorezb line on A4 */
+
+--leading-tight:1.06;   /* cover + section headlines */
+--leading-snug:1.18;
+--leading-normal:1.42;
+--leading-relaxed:1.55; /* body paragraphs and question lists */
+
+--tracking-tight:-0.01em;
+--tracking-normal:0;
+--tracking-label:0.08em; /* uppercase eyebrow labels */
+--tracking-wide:0.14em;
+}

@@ -3,6 +3,8 @@
 Transcripción operativa de `marca/manual-de-marca.pdf`. Si algo aquí contradice el PDF, manda el PDF.
 Los números de sección son los del manual.
 
+> **Precedencia.** En contenido y estructura mandan las reglas de creación (`marca/reglas-de-creacion.md`): carrusel de máximo 10 láminas (no 10 a 12), portada de 6 a 10 palabras, Patrón B, NBLA, lenguaje neutro. En lo visual manda el sistema de diseño (`marca/sistema-de-diseno/`): por ejemplo, la fila meta va a 104 px del borde y los márgenes laterales son de 109 px. Este manual cubre lo que ninguno de los dos dice.
+
 > Regla madre: la marca es pequeña a propósito. Pocos elementos, siempre los mismos.
 > Si el manual no resuelve una duda, **no se improvisa un recurso nuevo** (iconos, colores, fuentes, efectos): se pregunta.
 

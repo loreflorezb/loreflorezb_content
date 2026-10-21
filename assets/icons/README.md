@@ -1,1 +1,1 @@
-Corazones para viñetas. Mientras no estén, `marca.css` dibuja el corazón en color «plumas» (#FF6FB0).
+Corazones del sistema de diseño (`HeartBullet`): `heart-magenta.png` es la viñeta de las listas `.corazones`; `heart-light.png` es la variante clara. Son el único «icono» de la marca.

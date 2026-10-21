@@ -1,61 +1,41 @@
 /*
  * Sistema visual de @loreflorezb para Instagram.
- * Cada valor viene de marca/manual.md (el número entre corchetes es la sección).
+ *
+ * Fuente de verdad: el sistema de diseño de Claude Design (marca/sistema-de-diseno/), del que
+ * se importan los tokens. Cada componente de aquí replica uno de sus componentes (el nombre va
+ * entre corchetes). Lo que el sistema no cubre sale del manual (marca/manual.md, § = sección) o
+ * de las reglas de creación V2 (marca/reglas-de-creacion.md, «Reglas §»).
  * No agregues colores, fuentes ni efectos aquí sin aprobación de Lore.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Anton&family=Patrick+Hand&family=Outfit:wght@800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=block");
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Outfit:wght@800;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&display=block");
+@import url("../marca/sistema-de-diseno/tokens/colors.css");
+@import url("../marca/sistema-de-diseno/tokens/typography.css");
+@import url("../marca/sistema-de-diseno/tokens/spacing.css");
+@import url("../marca/sistema-de-diseno/tokens/effects.css");
 
-/* [05] Letra a mano: el archivo original va en assets/fonts/. */
 @font-face {
   font-family: "LoreFloresFont";
-  src: url("../assets/fonts/LoreFloresFont.woff2") format("woff2"),
-       url("../assets/fonts/LoreFloresFont.woff") format("woff"),
-       url("../assets/fonts/LoreFloresFont.otf") format("opentype"),
-       url("../assets/fonts/LoreFloresFont.ttf") format("truetype");
+  src: url("../assets/fonts/LoreFloresFont.ttf") format("truetype");
   font-display: block;
 }
-
-:root {
-  /* [04] Rosas */
-  --rubor-claro: #FFF4F5;
-  --tarjeta: #FFE4E9;
-  --rosa-palo: #F9B5C2;
-  --rosa-acento: #EB8BA4;
-  /* [04] Ciruelas */
-  --rosa-viejo: #B83B5C;
-  --magenta: #870050;
-  --ciruela: #66123E;
-  --tinta: #611439;
-  --plum: #69224B;
-  /* [04] Neutros y acento único */
-  --crema: #FDFAF3;
-  --arena: #EBD2D4;
-  --casi-negro: #272727;
-  --coral: #FD9A71;
-  /* [04] Tintas y acentos de carrusel */
-  --lavanda: #9D7D9C;
-  --cinta: #FEFBEA;
-  --frambuesa: #8B2049;
-  --resaltador: #E98BB3;
-  --plumas: #FF6FB0;
-  --caja-versiculo: #E8B1A1;
-  --burbuja: #E5865C;
-  --oxido: #A13E23;
-  --vino: #840021;
-
-  --t-titulo-portada: 150px;
-  --t-titulo: 122px;
-  --t-kicker: 62px;
-  --t-mano: 50px;
-  --t-cuerpo: 36px;
-  --t-meta: 27px;
+/* Reservadas, sin uso en las piezas actuales */
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/PlayfairDisplay-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 900;
+}
+@font-face {
+  font-family: "Playfair Display";
+  src: url("../assets/fonts/PlayfairDisplay-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: 400 900;
+  font-style: italic;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--casi-negro);
+  background: var(--ink-900);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -64,62 +44,74 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ───────────── Lienzo ───────────── */
+/* ───────────── Lienzo [CarouselSlide] ───────────── */
 
-/* [08] 1080 × 1440, márgenes de 90 px, un fondo plano por lámina */
 .lamina {
   position: relative;
   width: 1080px;
   height: 1440px;
-  padding: 150px 90px;
+  padding: 250px 109px 240px;
   overflow: hidden;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  font-family: "Poppins", sans-serif;
+  gap: 40px;
+  font-family: var(--font-body);
   color: var(--texto);
 }
 
-/* [10] Portada de reel e historias: 9:16, lo importante dentro del recorte 3:4 central */
+/* Portada de reel: 9:16, lo importante dentro del recorte 3:4 central (§10) */
 .lamina.formato-reel {
   height: 1920px;
-  padding: 390px 120px 420px 90px;
+  padding: 390px 120px 420px 109px;
 }
 
-/* [04] Los tres fondos, cada uno con su tinta, su meta y su estrella */
-.fondo-rubor  { background: #FFCAC9; --texto: var(--vino);  --meta: #C18B8A; --estrella: var(--rosa-acento); }
-.fondo-salmon { background: #FDBBAB; --texto: var(--vino);  --meta: #9A5946; --estrella: var(--burbuja); }
-.fondo-papel  { background: #F6F1E2; --texto: #B0595E;      --meta: #88836F; --estrella: var(--caja-versiculo); }
+/* Historias 1080 × 1920: solo la zona segura de la interfaz */
+.lamina.formato-historia {
+  height: 1920px;
+  padding: 300px 120px 420px 109px;
+  justify-content: center;
+}
 
-/* ───────────── [03] Fila meta y firma ───────────── */
+/* Fondos [CarouselSlide background]: cada uno con su tinta, su meta y su estrella */
+.fondo-rubor  { background: var(--ig-blush);  --texto: var(--ig-wine);     --meta: var(--ig-meta-blush);  --estrella: url("../assets/illustrations/star-8pt-blush.png"); }
+.fondo-salmon { background: var(--ig-salmon); --texto: var(--ig-wine);     --meta: var(--ig-meta-salmon); --estrella: url("../assets/illustrations/star-8pt-salmon.png"); }
+.fondo-papel  { background: var(--ig-paper);  --texto: var(--ig-rosewood); --meta: var(--ig-meta-paper);  --estrella: url("../assets/illustrations/star-8pt-paper.png"); }
+/* «Rubor sobre tinta: bloques oscuros puntuales» (§04). Reglas §11: el reencuadre va en lámina oscura. Una por pieza. */
+.fondo-tinta  { background: var(--plum-900);  --texto: var(--pink-50);     --meta: var(--pink-600);       --estrella-color: var(--plum-850); }
+/* Reglas §0: reels e historias en rosa más claro que el rosa palo, alto contraste («tinta sobre rubor») */
+.fondo-claro  { background: var(--pink-50);   --texto: var(--plum-900);    --meta: var(--rose-700);       --estrella: url("../assets/illustrations/star-8pt-blush.png"); }
+
+/* ───────────── Fila meta y firma [CarouselSlide MetaRow] [Signature] ───────────── */
 
 .meta {
   position: absolute;
-  left: 90px;
-  right: 90px;
+  left: 109px;
+  right: 109px;
   display: flex;
   justify-content: space-between;
-  font: 500 var(--t-meta)/1 "Poppins", sans-serif;
+  font: 500 var(--ig-size-meta)/1 var(--font-body);
   letter-spacing: -0.03em;
   text-transform: uppercase;
+  white-space: nowrap;
   color: var(--meta);
   z-index: 3;
 }
-.meta.arriba { top: 70px; }
-.meta.abajo  { bottom: 70px; }
+.meta.arriba { top: 104px; }
+.meta.abajo  { bottom: 104px; }
 
 .firma {
   position: absolute;
-  left: 90px;
-  right: 90px;
-  bottom: 70px;
+  left: 109px;
+  right: 109px;
+  bottom: 104px;
   text-align: center;
-  font: 600 var(--t-meta)/1 "Poppins", sans-serif;
-  color: var(--plum);
+  font: 600 var(--ig-size-meta)/1 var(--font-body);
+  color: var(--plum-800);
   z-index: 3;
 }
 
-/* ───────────── [05][06] Título en cinta + kicker ───────────── */
+/* ───────────── Título en cinta + kicker [TapeHeadline] [Kicker] ───────────── */
 
 .titulo {
   position: relative;
@@ -127,150 +119,180 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  transform: rotate(-1deg);
-  transform-origin: left center;
+  transform: rotate(-1.2deg);
 }
 .titulo .linea {
   display: block;
-  background: var(--cinta);
-  color: var(--lavanda);
-  font: 400 var(--t-titulo)/0.9 "Anton", "Arial Narrow", sans-serif;
+  background: var(--ig-tape);
+  color: var(--ig-lavender);
+  font: 400 var(--ig-size-headline)/var(--ig-leading-headline) var(--font-headline);
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   white-space: nowrap;
-  padding: 14px 26px 6px;
+  padding: 0.1em 0.14em 0.04em;
 }
-.titulo .linea + .linea { margin-left: 56px; margin-top: 10px; }
+/* Líneas desplazadas: la segunda se corre y gira un poco */
+.titulo .linea:nth-of-type(even) { margin-left: -0.12em; transform: rotate(0.6deg); }
 
 .titulo .kicker {
   position: relative;
   z-index: 1;
-  margin: 0 0 -0.32em 26px;
-  font: 700 var(--t-kicker)/1 "Poppins", sans-serif;
-  letter-spacing: -0.06em;
+  margin-bottom: -0.3em;
+  font: 700 var(--ig-size-kicker)/0.95 var(--font-body);
+  letter-spacing: var(--ig-tracking-kicker);
   text-transform: uppercase;
-  color: var(--texto);
+  color: var(--plum-900);
 }
+.fondo-tinta .titulo .kicker { color: var(--pink-50); }
 
-/* Título invertido para énfasis: cinta sobre lavanda */
-.titulo.invertido .linea { background: var(--lavanda); color: var(--cinta); }
+/* Invertido (cinta sobre lavanda), para énfasis. En una sola línea resalta 1–2 palabras. */
+.titulo.invertido .linea,
+.titulo .linea.invertida { background: var(--ig-lavender); color: var(--ig-tape); }
+/* Sin cinta: lavanda sobre papel */
+.titulo.sin-cinta { transform: none; }
+.titulo.sin-cinta .linea { background: none; padding: 0; }
 
-/* [08] Portada: título más grande y centrado */
-.portada .titulo { align-items: center; align-self: center; transform-origin: center; }
-.portada .titulo .linea { font-size: var(--t-titulo-portada); }
-.portada .titulo .linea + .linea { margin-left: 0; }
-.portada .titulo .linea:nth-child(odd) { transform: translateX(-28px); }
-.portada .titulo .linea:nth-child(even) { transform: translateX(28px); }
+.centro .titulo, .titulo.centrado { align-items: center; align-self: center; }
 
-/* ───────────── [05] Cuerpo ───────────── */
+/* Portada (§08): centrada y a 150 px */
+.portada .titulo { align-items: center; align-self: center; }
+.portada .titulo .linea { font-size: var(--ig-size-headline-xl); }
+/* Reglas §0.1: portada de 6 a 10 palabras → hasta 4 líneas más compactas */
+.portada .titulo.largo .linea { font-size: 104px; }
+
+/* ───────────── Cuerpo [CarouselText] ───────────── */
 
 .cuerpo {
   position: relative;
   z-index: 2;
   max-width: 560px;
-  font: 400 var(--t-cuerpo)/0.98 "Poppins", sans-serif;
-  letter-spacing: -0.04em;
+  font: 400 var(--ig-size-body)/var(--ig-leading-body) var(--font-body);
+  letter-spacing: var(--ig-tracking-body);
+  text-wrap: pretty;
 }
-.cuerpo.ancho { max-width: 900px; }
+.cuerpo.ancho { max-width: 820px; }
 .cuerpo p + p { margin-top: 0.7em; }
 .cuerpo strong { font-weight: 600; }
 .entradilla { font-weight: 500; }
+.centro { align-items: center; text-align: center; }
+.centro .cuerpo, .centro .mano { margin-left: auto; margin-right: auto; }
 
-/* [06] Corazones como viñetas */
+/* Corazones como viñetas [HeartBullet] */
 .corazones { list-style: none; display: flex; flex-direction: column; gap: 26px; }
-.corazones li { position: relative; padding-left: 62px; }
+.corazones li { position: relative; padding-left: 64px; }
 .corazones li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.02em;
-  width: 38px;
-  height: 34px;
-  background: var(--plumas);
-  -webkit-mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22'><path d='M12 21.6 10.3 20C4.2 14.5.2 10.9.2 6.5.2 2.9 3 .2 6.6.2c2 0 4 .9 5.4 2.4C13.4 1.1 15.4.2 17.4.2c3.6 0 6.4 2.7 6.4 6.3 0 4.4-4 8-10.1 13.5Z'/></svg>") center / contain no-repeat;
-          mask: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22'><path d='M12 21.6 10.3 20C4.2 14.5.2 10.9.2 6.5.2 2.9 3 .2 6.6.2c2 0 4 .9 5.4 2.4C13.4 1.1 15.4.2 17.4.2c3.6 0 6.4 2.7 6.4 6.3 0 4.4-4 8-10.1 13.5Z'/></svg>") center / contain no-repeat;
+  top: -0.05em;
+  width: 44px;
+  height: 44px;
+  background: url("../assets/icons/heart-magenta.png") center / contain no-repeat;
 }
 
-/* [08] Protocolo: lista con kicker numerado */
+/* Reglas §11, Patrón B lámina 5: lista corta en cajitas (tarjeta plana, radio 22, sin borde) */
+.cajitas { list-style: none; display: flex; flex-direction: column; align-items: flex-start; gap: 22px; }
+.cajitas li {
+  background: var(--pink-50);
+  color: var(--plum-900);
+  border-radius: var(--radius-lg);
+  padding: 22px 32px;
+}
+
+/* Protocolo (§08): lista con kicker numerado */
 .pasos { display: flex; flex-direction: column; gap: 40px; }
 .paso .numero {
   display: block;
   margin-bottom: 10px;
-  font: 700 var(--t-kicker)/1 "Poppins", sans-serif;
-  letter-spacing: -0.06em;
-  color: var(--texto);
+  font: 700 var(--ig-size-kicker)/1 var(--font-body);
+  letter-spacing: var(--ig-tracking-kicker);
+  color: var(--plum-900);
 }
 
-/* ───────────── [05][06] Letra a mano + resaltador ───────────── */
+/* ───────────── Letra a mano + resaltador [HandNote] [Highlight] ───────────── */
 
 .mano {
   position: relative;
   z-index: 2;
-  max-width: 900px;
-  /* Patrick Hand solo sirve para previsualizar mientras falta el archivo original; render.mjs avisa. */
-  font: 400 var(--t-mano)/1.12 "LoreFloresFont", "Patrick Hand", cursive;
-  letter-spacing: 0.04em;
+  max-width: 820px;
+  font: 400 var(--ig-size-hand)/var(--ig-leading-hand) var(--font-hand);
+  letter-spacing: var(--ig-tracking-hand);
   text-transform: uppercase;
-  color: var(--frambuesa);
+  color: var(--ig-raspberry);
+  text-wrap: pretty;
 }
+.mano.minusculas { text-transform: none; }
+.mano.grande { font-size: 62px; }
 /* Junto a una ilustración lateral, la frase a mano respeta la columna de 560 px */
 .mano.angosta { max-width: 560px; }
 .resaltado {
   white-space: nowrap;
-  background: var(--resaltador);
-  padding: 0 0.12em;
+  background: var(--ig-highlight);
+  padding: 0 0.08em;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
 }
 
-/* ───────────── [06] Caja de versículo y burbuja ───────────── */
+/* ───────────── Versículo y burbuja [VerseBox] [SpeechBubble] ───────────── */
 
 .versiculo {
   position: relative;
   z-index: 2;
-  max-width: 820px;
-  background: var(--caja-versiculo);
-  color: var(--tinta);
-  border-radius: 32px;
-  padding: 38px 44px;
-  font: 400 var(--t-cuerpo)/1.18 "Poppins", sans-serif;
-  letter-spacing: -0.03em;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 760px;
+  background: var(--ig-peach-box);
+  color: var(--ig-rosewood);
+  border-radius: var(--radius-xl);
+  padding: 40px 28px 30px;
+  font: 400 var(--ig-size-body)/var(--ig-leading-body) var(--font-body);
+  letter-spacing: var(--ig-tracking-body);
 }
-.versiculo cite { font-style: normal; font-weight: 700; white-space: nowrap; }
+.versiculo cite {
+  font: 700 calc(var(--ig-size-body) * 1.2)/1 var(--font-body);
+  font-style: normal;
+  letter-spacing: var(--ig-tracking-kicker);
+}
 
 .burbuja {
   position: relative;
   z-index: 2;
   align-self: flex-start;
-  max-width: 820px;
-  background: var(--burbuja);
-  color: var(--cinta);
-  border-radius: 32px;
-  padding: 26px 40px;
-  font: 500 var(--t-cuerpo)/1.15 "Poppins", sans-serif;
-  letter-spacing: -0.03em;
+  width: 480px;
+  aspect-ratio: 1.2;
+  display: flex;
+  align-items: center;
+  padding: 0 48px;
+  background: var(--ig-terracotta);
+  color: var(--ig-tape);
+  border-radius: 50% 50% 4% 50% / 50% 50% 4% 50%;
+  font: 400 54px/1.12 var(--font-hand);
+  letter-spacing: var(--ig-tracking-hand);
 }
+.burbuja.chica { width: 360px; font-size: 42px; padding: 0 36px; }
 
-/* ───────────── [06] Etiqueta con respaldo desplazado ───────────── */
+/* ───────────── Etiqueta [StickerLabel], escalada al lienzo de 1080 ───────────── */
 
 .etiqueta {
   position: relative;
   z-index: 2;
   align-self: flex-start;
-  background: var(--rosa-palo);
-  color: var(--tinta);
-  border-radius: 14px;
-  padding: 16px 28px;
-  font: 600 32px/1 "Poppins", sans-serif;
-  letter-spacing: 0.06em;
+  background: var(--sticker-fill);
+  color: var(--sticker-text);
+  border-radius: var(--radius-md);
+  padding: 16px 30px;
+  font: 800 34px/1.18 var(--font-display);
+  letter-spacing: var(--tracking-label);
   text-transform: uppercase;
-  box-shadow: 6px 6px 0 var(--ciruela);
-  transform: rotate(-2deg);
+  box-shadow: 6px 6px 0 var(--sticker-backing);
+  transform: rotate(var(--tilt-sticker));
 }
-/* [04] El coral: una sola vez por pieza, en un solo elemento */
-.etiqueta.coral { background: var(--coral); }
-.palabra-coral { color: var(--coral); }
+/* El coral: una sola vez por pieza, en un solo elemento */
+.etiqueta.coral { background: var(--coral-500); color: var(--plum-900); }
+.palabra-coral { color: var(--coral-500); }
 
-/* ───────────── [07] Ilustración ───────────── */
+/* ───────────── Ilustración [Illustration] ───────────── */
 
 .ilustracion {
   position: absolute;
@@ -278,12 +300,13 @@ body {
   margin: 0;
 }
 .ilustracion img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
-.ilustracion.abajo-derecha   { right: 60px;  bottom: 130px; width: 360px; height: 560px; }
-.ilustracion.abajo-izquierda { left: 60px;   bottom: 130px; width: 360px; height: 560px; }
-.ilustracion.abajo-centro    { left: 50%; transform: translateX(-50%); bottom: 130px; width: 620px; height: 520px; }
+.ilustracion.abajo-derecha   { right: 60px;  bottom: 170px; width: 360px; height: 560px; }
+.ilustracion.abajo-izquierda { left: 60px;   bottom: 170px; width: 360px; height: 560px; }
+.ilustracion.abajo-centro    { left: 50%; transform: translateX(-50%); bottom: 170px; width: 620px; height: 520px; }
 /* Portada: escena a sangre en la mitad inferior; el título queda arriba, nunca encima */
 .ilustracion.a-sangre        { left: 0; right: 0; bottom: 0; height: 760px; }
 .ilustracion.a-sangre img    { object-fit: cover; }
+.portada:has(.titulo.largo) .ilustracion.a-sangre { height: 640px; }
 
 /* Hueco reservado mientras llega la ilustración real. No se publica así. */
 .ilustracion.pendiente {
@@ -293,26 +316,34 @@ body {
   text-align: center;
   padding: 40px;
   border: 4px dashed var(--meta);
-  border-radius: 32px;
+  border-radius: var(--radius-xl);
   color: var(--meta);
-  font: 500 26px/1.3 "Poppins", sans-serif;
+  font: 500 26px/1.3 var(--font-body);
 }
 .ilustracion.a-sangre.pendiente { border-radius: 0; border-width: 4px 0 0; }
 
-/* ───────────── [06] Estrellas de 8 puntas (solo decoración) ───────────── */
+/* ───────────── Estrellas de 8 puntas [StarBurst] (solo decoración) ───────────── */
 
 .estrella {
   position: absolute;
   z-index: 0;
   width: 150px;
   height: 150px;
-  background: var(--estrella);
-  opacity: 0.5;
-  clip-path: polygon(50% 0%, 59% 28%, 85% 15%, 72% 41%, 100% 50%, 72% 59%, 85% 85%, 59% 72%, 50% 100%, 41% 72%, 15% 85%, 28% 59%, 0% 50%, 28% 41%, 15% 15%, 41% 28%);
+  background: var(--estrella) center / contain no-repeat;
+  pointer-events: none;
 }
+/* Sobre tinta no hay estrella en PNG: la misma forma, tono sobre tono */
+.fondo-tinta .estrella {
+  background: var(--estrella-color);
+  -webkit-mask: url("../assets/illustrations/star-8pt-mask.png") center / contain no-repeat;
+          mask: url("../assets/illustrations/star-8pt-mask.png") center / contain no-repeat;
+}
+
+/* ───────────── Historias: se leen a pantalla completa, el texto sube de escala ───────────── */
+
+.formato-historia .cuerpo { font-size: 50px; line-height: 1.1; max-width: 860px; }
+.formato-historia .mano { font-size: 72px; }
 
 /* ───────────── Utilidades de composición ───────────── */
 
 .empuja { margin-top: auto; }
-.centro { align-items: center; text-align: center; }
-.centro .cuerpo, .centro .mano { margin-left: auto; margin-right: auto; }

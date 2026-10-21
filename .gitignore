@@ -1,2 +1,6 @@
 node_modules/
 .DS_Store
+# SF Pro Display: licencia de Apple, no se redistribuye. Va solo en la copia local.
+assets/fonts/SF-Pro-Display-*.otf
+# Copias ligeras para Drive: se regeneran con scripts/preparar-drive.py
+posts/*/drive/

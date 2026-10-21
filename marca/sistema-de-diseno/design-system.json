@@ -1,0 +1,65 @@
+{
+  "v": 3,
+  "assetGroups": {
+    "carousel-reference": {
+      "files": {},
+      "name": "carousel-reference",
+      "order": []
+    },
+    "fonts": {
+      "files": {},
+      "name": "fonts",
+      "order": []
+    },
+    "icons": {
+      "files": {},
+      "name": "icons",
+      "order": []
+    },
+    "illustrations": {
+      "files": {},
+      "name": "illustrations",
+      "order": []
+    },
+    "notes": {
+      "files": {},
+      "name": "notes",
+      "order": []
+    }
+  },
+  "blobs": {},
+  "createdOnFiles": {
+    "at": "2026-10-21T14:50:02.944Z",
+    "v": 1
+  },
+  "docs": {
+    "readme": "project/README.md",
+    "sections": [
+      "project/ui_kits/guides/README.md",
+      "project/ui_kits/instagram/README.md",
+      "project/uploads/contrato-de-voz-lore-florez.md",
+      "project/uploads/loreflorezb-playbook-contenido.md"
+    ]
+  },
+  "editing": "off",
+  "groups": [
+    "carousel-reference",
+    "fonts",
+    "icons",
+    "illustrations",
+    "notes"
+  ],
+  "layout": "files",
+  "libraries": [],
+  "namespace": "LoreFlRezDesignSystem_0046a8",
+  "sections": {},
+  "source": {
+    "app": "claude-design",
+    "exportedAt": "2026-10-21T14:50:02.944Z",
+    "map": "project/migration-map.json",
+    "projectId": "0046a8dd-ac98-4d27-9f97-8757f86d2a50",
+    "url": "https://claude.ai/design/p/0046a8dd-ac98-4d27-9f97-8757f86d2a50",
+    "v": 1
+  },
+  "title": "Lore Flórez Design System"
+}

@@ -1,10 +1,15 @@
 # Contenido de @loreflorezb
 
-Repositorio de diseño de los posts de Instagram de Lore Flórez B, psicóloga cristiana.
+Repositorio de diseño de los posts de Instagram de Lore Flórez B, psicóloga y consejera bíblica.
 
 - Para diseñar cualquier post usa la skill `disenar`, que despacha al agente `disenador` (`.claude/agents/disenador.md`).
-- La marca vive en `marca/`: `manual.md` (sistema visual), `voz.md` (cómo habla Lore), `guiones/` (reels reales), `manual-de-marca.pdf` (fuente original; manda sobre el `.md`).
-- Las piezas se construyen en HTML con `plantillas/marca.css` y se renderizan con `node scripts/render.mjs <laminas.html>`, que además revisa la lista del manual.
-- Cada post va en `posts/AAAA-MM-DD-slug/` con `brief.md`, `laminas.html` y `png/`.
-- Recursos de marca en `assets/` (fuentes, ilustraciones). No se inventan recursos: si falta algo, se pregunta.
+- Qué manda sobre qué:
+  1. `marca/reglas-de-creacion.md` (V2): contenido, voz, teología, ética, estructura (carrusel de máx. 10 láminas), copy, CTA e historias.
+  2. `marca/sistema-de-diseno/`: todo lo visual (copia del artifact «Lore Flórez Design System», https://claude.ai/artifact/6rQFxeDygdo1JRDxiVHDiN).
+  3. `marca/manual.md` y `marca/manual-de-marca.pdf`: lo que el sistema de diseño no cubra.
+  4. `marca/voz.md` y el banco de voz `marca/voz/`: el oído de Lore.
+- Las piezas se construyen en HTML con `plantillas/marca.css` (importa los tokens del sistema de diseño) y se renderizan con `node scripts/render.mjs <archivo.html>`, que además revisa las reglas.
+- Cada post va en `posts/AAAA-MM-DD-tema/` con `brief.md`, `laminas.html`, `historias.html`, `carrusel-png/` e `historias-png/`.
+- Drive: `scripts/preparar-drive.py` + `scripts/subir-drive.mjs` dejan cada archivo en `Posts - Carruseles` o `Stories` → `AAAA` → `mes`, con el nombre `DD-MM-AAAA_tema_NN.png`. Necesita `GDRIVE_CLIENT_ID`, `GDRIVE_CLIENT_SECRET` y `GDRIVE_REFRESH_TOKEN` en el entorno. No se suben imágenes con las herramientas MCP de Drive (el base64 se corta).
+- No se inventan recursos: si falta algo, se pregunta.
 - Todo en español, siempre de tú.
