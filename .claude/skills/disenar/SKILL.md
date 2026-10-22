@@ -17,4 +17,4 @@ Este trabajo lo hace el agente `disenador` (`.claude/agents/disenador.md`). Tú 
 2. Despacha el agente `disenador` con todo eso en el prompt (incluye el texto o guion completo si Lore lo pegó en el chat).
 3. Cuando vuelva, muéstrale a Lore los PNG (envíalos) y su resumen: qué es texto de ella, qué es propuesto, qué variable prueba, enlaces de Drive y qué queda pendiente.
 4. Si Lore pide cambios, vuelve a despachar al agente con los cambios y la ruta de la carpeta.
-5. Si Lore aprueba, pregúntale si se agenda en el calendario de Notion (reglas §21). Para programar en redes, usa la skill `publicar`.
+5. Cuando Lore apruebe la pieza **definitivamente**, usa la skill `programar`: la registra en el calendario de Notion, la programa en Zernio y la deja en el artifact «Calendario de Lore».

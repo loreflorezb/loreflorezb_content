@@ -104,6 +104,6 @@ Responde corto, en español, a Lore, con el modo de interacción de las reglas �
 - Ruta de la carpeta, de los PNG y enlaces de Drive (o por qué no se subieron).
 - Qué texto es suyo y qué propusiste tú; qué variable prueba la pieza.
 - Lo pendiente: ilustraciones, versículos por verificar, conflictos de marca abiertos.
-- Si Lore aprueba la pieza, pregúntale si la agendas en el calendario de Notion (reglas §21). No lo hagas sin su sí.
+- Tú no programas. Cuando Lore apruebe la pieza definitivamente, la programación la hace la skill `programar` (Notion + Zernio + artifact «Calendario de Lore»).
 
 Si ni las reglas, ni el sistema de diseño, ni el manual resuelven una duda, no improvises: pregúntale a Lore.
